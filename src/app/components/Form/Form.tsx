@@ -8,11 +8,9 @@ import cx from "classnames";
 
 interface FormProps {
   nafn: string;
-  kennitala: string;
   simanumer: string;
   netfang: string;
   astaeda: string;
-  tilvisun: string;
 }
 
 export default function Form() {
@@ -23,7 +21,6 @@ export default function Form() {
   const [astaeda, setAstaeda] = useState("");
 
   const [formError, setFormError] = useState<boolean>();
-  const [kennitalaError, setKennitalaError] = useState<boolean>(false);
   const [simanumerError, setSimanumerError] = useState<boolean>(false);
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
@@ -43,16 +40,10 @@ export default function Form() {
 
   async function handleOnSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const SSDlength = /^\d{10}$/;
+
     const phoneLength = /^\d{7}$/;
 
     let noSubmit = false;
-
-    if (SSDlength.test(kennitala) === false) {
-      setKennitalaError(true);
-      setFormError(true);
-      noSubmit = true;
-    }
 
     if (phoneLength.test(simanumer) === false) {
       setSimanumerError(true);
@@ -82,11 +73,9 @@ export default function Form() {
 
     const formData: FormProps = {
       nafn: "",
-      kennitala: "",
       simanumer: "",
       netfang: "",
       astaeda: "",
-      tilvisun: "",
     };
 
     const form = e.currentTarget as HTMLFormElement;
@@ -104,6 +93,8 @@ export default function Form() {
   }
   return (
     <form
+      name="contact"
+      data-netlify="true"
       method="POST"
       onSubmit={handleOnSubmit}
       className="flex flex-col gap-fluid-18 md:gap-fluid-24 w-fill smmd:self-start smmd:w-[80%] lg:w-[60%]"
@@ -194,7 +185,7 @@ export default function Form() {
             " text-fontBlue w-fill py-fl  py-fluid-12  shadow-button rounded-16  text-md font-headline font-medium transition-all duration-300 ease-in-out",
             {
               ["bg-red"]: formError,
-              ["bg-green hover:bg-hoverBlue"]: !formError,
+              ["bg-green hover:bg-hoverBlue hover:text-white"]: !formError,
             }
           )}
         >
