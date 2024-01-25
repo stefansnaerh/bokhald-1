@@ -15,7 +15,6 @@ interface FormProps {
 
 export default function Form() {
   const [nafn, setNafn] = useState("");
-  const [kennitala, setKennitala] = useState("");
   const [simanumer, setSimanumer] = useState("");
   const [netfang, setNetfang] = useState("");
   const [astaeda, setAstaeda] = useState("");
@@ -70,26 +69,6 @@ export default function Form() {
     }
 
     if (noSubmit) return;
-
-    const formData: FormProps = {
-      nafn: "",
-      simanumer: "",
-      netfang: "",
-      astaeda: "",
-    };
-
-    const form = e.currentTarget as HTMLFormElement;
-
-    Array.from(form.elements).forEach((field) => {
-      if (field instanceof HTMLInputElement && field.name) {
-        formData[field.name as keyof FormProps] = field.value;
-      }
-    });
-
-    fetch("/api/mail", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    });
   }
   return (
     <form
