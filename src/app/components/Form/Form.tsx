@@ -106,7 +106,7 @@ export default function Form() {
     <form
       method="POST"
       onSubmit={handleOnSubmit}
-      className="flex flex-col gap-fluid-18 md:gap-fluid-24 w-fill smmd:w-[80%] lg:w-[60%]"
+      className="flex flex-col gap-fluid-18 md:gap-fluid-24 w-fill smmd:self-start smmd:w-[80%] lg:w-[60%]"
     >
       <FadeIn>
         <label htmlFor="nafn" className="flex flex-col gap-4 md:gap-6">
