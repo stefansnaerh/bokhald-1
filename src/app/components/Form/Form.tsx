@@ -75,7 +75,6 @@ export default function Form() {
       name="bokhaldContact"
       data-netlify="true"
       method="POST"
-      onSubmit={handleOnSubmit}
       className="flex flex-col gap-fluid-18 md:gap-fluid-24 w-fill smmd:self-start smmd:w-[80%] lg:w-[60%]"
     >
       <FadeIn>
