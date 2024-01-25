@@ -93,7 +93,7 @@ export default function Form() {
   }
   return (
     <form
-      name="contact"
+      name="bokhaldContact"
       data-netlify="true"
       method="POST"
       onSubmit={handleOnSubmit}
@@ -184,7 +184,7 @@ export default function Form() {
           className={cx(
             " text-fontBlue w-fill py-fl  py-fluid-12  shadow-button rounded-16  text-md font-headline font-medium transition-all duration-300 ease-in-out",
             {
-              ["bg-red"]: formError,
+              ["bg-red text-white"]: formError,
               ["bg-green hover:bg-hoverBlue hover:text-white"]: !formError,
             }
           )}
