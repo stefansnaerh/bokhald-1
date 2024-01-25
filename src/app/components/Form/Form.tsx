@@ -172,7 +172,7 @@ export default function Form() {
       </FadeIn>
       {formError && (
         <p className="text-sm text-red text-center">
-          Úps! Einhverjar upplýsingar hafa verið skrifaðar vitlausar inn
+          Úps! Einhverjar upplýsingar hafa verið skrifaðar vitlaust inn
         </p>
       )}
     </form>
