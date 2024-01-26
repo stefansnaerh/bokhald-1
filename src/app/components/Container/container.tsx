@@ -8,10 +8,11 @@ interface SliceContainerProps {
 }
 
 const Container = (props: SliceContainerProps) => {
-  const { lessPadding = false, children, className } = props;
+  const { lessPadding = false, children, className, id } = props;
 
   return (
     <div
+      id={id}
       className={`lg:py-fluid-96 py-64  flex w-full items-center content-center max-w-screen-xxl ${className} ${
         lessPadding ? "px-container-56" : "px-container-88"
       }`}

@@ -59,36 +59,37 @@ export default function MobileNav({
       >
         <ul className="text-lg flex flex-col gap-fluid-40 xs:gap-fluid-48 ">
           <li>
-            <a
-              onClick={() => setShowMobileNav(false)}
-              aria-label={`Fara efst á forsíðu`}
-              href={"/"}
-              className="text-fontBlue "
-            >
-              Forsíða
-            </a>
+            <ScrollToSection
+              buttonText={"Heim"}
+              ariaLabel={``}
+              sectionID="home"
+              setShowMobileNav={setShowMobileNav}
+            />
           </li>
           <li>
-            <a
-              onClick={() => setShowMobileNav(false)}
-              aria-label={`fara á`}
-              href="/"
-              className="text-fontBlue"
-            >
-              Þjónusta
-            </a>
+            <ScrollToSection
+              buttonText={"Þjónusta"}
+              ariaLabel={``}
+              sectionID="services"
+              setShowMobileNav={setShowMobileNav}
+            />
           </li>
           <li>
-            <a
-              onClick={() => setShowMobileNav(false)}
-              aria-label={`sjá um okkur`}
-              href="/"
-              className=" text-fontBlue"
-            >
-              Um okkur
-            </a>
+            <ScrollToSection
+              buttonText={"Um okkur"}
+              setShowMobileNav={setShowMobileNav}
+              ariaLabel={``}
+              sectionID="about"
+            />
           </li>
         </ul>
+        <ScrollToSection
+          buttonText={"Hafa samband"}
+          ariaLabel={``}
+          classname="bg-green hover:bg-hoverBlue hover:text-white shadow-button"
+          sectionID="contact"
+          setShowMobileNav={setShowMobileNav}
+        />
       </nav>
     </>
   );

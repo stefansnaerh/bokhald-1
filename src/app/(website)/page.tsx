@@ -26,7 +26,7 @@ export default function Home() {
           <ScrollToSection
             buttonText={"Bókaðu fund með okkur"}
             ariaLabel={`Takki til að fara á form til að bóka fund hjá okkur`}
-            classname="bg-green hover:bg-hoverBlue hover:text-white shadow-button"
+            classname="bg-green hover:bg-hoverBlue hover:text-white shadow-button py-fluid-16 px-fluid-24 rounded-12"
             sectionID="contact"
             icon={<Calendar className="hover:text-white h-20 w-20 " />}
           />
@@ -39,7 +39,10 @@ export default function Home() {
       <AboutUs />
       <CompanyMotto />
       <Employees />
-      <Container className="flex flex-col gap-fluid-48 lg:flex-row">
+      <Container
+        id="contact"
+        className="flex flex-col gap-fluid-48 lg:flex-row"
+      >
         <Contact />
         {/* <div className="lg:w-[65%] self-start">
               <div

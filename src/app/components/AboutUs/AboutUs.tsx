@@ -8,11 +8,8 @@ import AboutBokhald3 from "../../images/bokhaldAbout3.jpg";
 
 export default function AboutUs() {
   return (
-    <Container className="bg-beigeLighter" lessPadding>
-      <section
-        id="about"
-        className="  flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 "
-      >
+    <Container id="about" className="bg-beigeLighter" lessPadding>
+      <section className="  flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 ">
         <FadeIn className="relative flex flex-col gap-fluid-40 md:gap-fluid-56 md:w-[40%]">
           <div className=" border-b-[3px] pb-4 border-y-green w-fit">
             <h2 className="text-h2 font-headline font-semiBold w-fit">
