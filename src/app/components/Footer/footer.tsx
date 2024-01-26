@@ -40,9 +40,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <p className="absolute right-16 bottom-16 text-sm">
-          ©️ 2023 Stefán Snær
-        </p>
+        <p className="absolute right-16 bottom-16 text-sm">©️ 2024 Vefsson</p>
       </div>
     </footer>
   );
